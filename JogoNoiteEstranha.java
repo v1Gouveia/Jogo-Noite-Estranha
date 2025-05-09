@@ -123,3 +123,67 @@ public class JogoNoiteEstranha {
             'c'
         );
     }
+
+    public boolean faseRelogio() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("");
+        System.out.println("Muito bem, você achou a porta correta!");
+        System.out.println("pressione enter para continuar..."); 
+        input.nextLine();
+        System.out.println("Ao atravessar a porta, você se depara com um imenso relógio suspenso no ar, seus ponteiros girando em um ritmo acelerado.");
+        System.out.println("A voz retorna, agora com um tom mais grave e urgente:");
+        System.out.println("Para escapar, você precisa parar o relógio. Mas cuidado... a cada segundo que passa, você envelhece");
+        System.out.println("pressione qualquer enter para continuar..."); 
+        input.nextLine();
+        System.out.println("Respondas as perguntas para parar o relógio!"); 
+        System.out.println("\n=== FASE DO RELÓGIO ===");
+        return perguntaMultipla(
+            "O que o comando 'return' faz dentro de uma função?",
+            new String[]{
+                "a) Encerra o programa",
+                "b) Retorna um valor e encerra a execução da função",
+                "c) Cria uma nova variável",
+                "d) Inicia um loop"
+            },
+            'b'
+        );
+    }
+
+    public boolean perguntaMultipla(String pergunta, String[] opcoes, char respostaCorreta) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(pergunta);
+        for (String opcao : opcoes) {
+            System.out.println(opcao);
+        }
+
+        System.out.print("Digite a letra da resposta correta: ");
+        char resposta = scanner.next().toLowerCase().charAt(0);
+
+        switch (resposta) {
+            case 'a':
+            case 'b':
+            case 'c':
+            case 'd':
+                if (resposta == respostaCorreta) {
+                    System.out.println("Muito bem! Resposta correta.");
+                    return true;
+                } else {
+                    System.out.println("Resposta incorreta. Você falhou!");
+                    return false;
+                }
+            default:
+                System.out.println("Opção inválida.");
+                return false;
+        }
+    }
+
+    public void fimJogo() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Muito bem, você achou conseguiu, parar o relógio.");
+        System.out.println("pressione enter para continuar..."); 
+        input.nextLine();
+        System.out.println("De repente, " + nome + " desperta em seu quarto, ofegante e exausto. ");
+        System.out.println(".Olha ao redor, confuso — tudo parece normal, mas a sensação permanece.");
+        System.out.println("Ele se pergunta, com o coração acelerado. Foi apenas um sonho... ou algo mais");
+    }
+}
