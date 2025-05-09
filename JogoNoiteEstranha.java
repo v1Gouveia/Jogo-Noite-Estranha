@@ -71,3 +71,55 @@ public class JogoNoiteEstranha {
 
         scanner.close();
     }
+
+    public void iniciarHistoria() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nEm uma noite chuvosa, " + nome + " estava prestes a pegar no sono...");
+        System.out.println("Ao adormecer, " + nome + " se vê suspenso no ar, confuso.");
+        System.out.println("Uma voz misteriosa ecoa: 'Para sair deste lugar, você precisa deter as paredes.'");
+        System.out.println("pressione qualquer enter para continuar..."); 
+        input.nextLine();
+    }
+
+    public boolean faseParedes() {
+        System.out.println("Respondas as perguntas para achar a porta certa:");
+        System.out.println("\n=== FASE DAS PAREDES ===");
+        return perguntaMultipla(
+            "Qual das alternativas representa uma função em Java?",
+            new String[]{
+                "a) int numero = 5;",
+                "b) System.out.println();",
+                "c) public void minhaFuncao() {}",
+                "d) Scanner sc = new Scanner(System.in);"
+            },
+            'c'
+        );
+    }
+
+    public boolean fasePortas() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("");
+        System.out.println("Muito bem, você parou as paredes!");
+        System.out.println("pressione qualquer enter para continuar..."); 
+        input.nextLine();
+        System.out.println("Uma das paredes se desfaz lentamente, revelando um corredor com várias portas.");
+        System.out.println("A mesma voz ressoa novamente, firme e enigmática:"
+                + " \n Para continuar, você deve escolher a porta certa. Se errar, ficará preso aqui para sempre. ");
+        System.out.println("pressione qualquer enter para continuar..."); 
+        input.nextLine();
+        System.out.println("Respondas as perguntas para achar a porta certa: ");
+        System.out.println("pressione enter para continuar..."); 
+        input.nextLine();
+        System.out.println("Começando segunda rodada de perguntas");
+        System.out.println("\n=== FASE DAS PORTAS ===");
+        return perguntaMultipla(
+            "Qual palavra-chave usamos para declarar uma função que retorna um valor inteiro?",
+            new String[]{
+                "a) void",
+                "b) return",
+                "c) int",
+                "d) function"
+            },
+            'c'
+        );
+    }
