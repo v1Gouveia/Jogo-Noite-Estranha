@@ -257,6 +257,3 @@ public class JogoNoiteEstranha {
         input.nextLine();                      
     }
 }
-
-    }
-}
