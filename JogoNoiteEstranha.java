@@ -26,23 +26,7 @@ public class JogoNoiteEstranha {
 
             String escolha = input.nextLine();
 
-            switch (escolha) {
-                case "1":
-                    jogo.iniciarJogo();
-                    
-                    break;
-                case "2":
-                    System.out.println("\n=== INSTRUÇÕES ===");
-                    System.out.println("Responda corretamente às perguntas em cada fase para avançar na história.");
-                    System.out.println("Se errar, o jogo termina. Boa sorte!");
-                    break;
-                case "3":
-                    System.out.println("Saindo do jogo. Até a próxima!");
-                    input.close();
-                    return;
-                default:
-                    System.out.println("Opção inválida. Tente novamente.");
-            }
+            
         }
     }
 
