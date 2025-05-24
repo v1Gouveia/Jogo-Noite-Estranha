@@ -114,6 +114,61 @@ public class JogoNoiteEstranha {
         );
     }
 
+     ////perguntas2
+    public boolean perguntas2() {
+            return perguntaMultipla(
+            "Qual é o tipo de dado primitivo para representar números inteiros em Java?",
+            new String[]{
+                "a) int",  
+                "b) float",  
+                "c) char",
+                "d) double",
+            },
+            'a'
+        );
+    }
+    
+
+    public boolean fasePortas() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("");
+        System.out.println("Muito bem, você parou as paredes!");
+        System.out.println("pressione qualquer enter para continuar..."); 
+        input.nextLine();
+        System.out.println("Uma das paredes se desfaz lentamente, revelando um corredor com várias portas.");
+        System.out.println("A mesma voz ressoa novamente, firme e enigmática:"
+                + " \n Para continuar, você deve escolher a porta certa. Se errar, ficará preso aqui para sempre. ");
+        System.out.println("pressione qualquer enter para continuar..."); 
+        input.nextLine();
+        System.out.println("Respondas as perguntas para achar a porta certa: ");
+        System.out.println("pressione enter para continuar..."); 
+        input.nextLine();
+        System.out.println("Começando segunda rodada de perguntas");
+        System.out.println("\n=== FASE DAS PORTAS ===");
+        return perguntaMultipla(
+            "Qual palavra-chave usamos para declarar uma função que retorna um valor inteiro?",
+            new String[]{
+                "a) void",
+                "b) return",
+                "c) int",
+                "d) function"
+            },
+            'c'
+        );
+    }
+    
+    public boolean perguntas3() {
+            return perguntaMultipla(
+            "O que significa FOR em um laço de repetição?",
+            new String[]{
+               " a) Definir um tipo de variável",  
+                "b) Declarar uma classe",  
+                "c) Repetir um bloco de código várias vezes ", 
+                "d) Atribuir valores a variáveis",  
+            },
+            'c'
+        );
+    }
     
 
     public void fimJogo() {
