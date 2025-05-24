@@ -1,4 +1,13 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ */
+package jogonoiteestranha;
 
+/**
+ *
+ * @author renato.santos25
+ */
 import java.util.Scanner;
 
 public class JogoNoiteEstranha {
@@ -33,17 +42,16 @@ public class JogoNoiteEstranha {
                     break;
                 case "2":
                     System.out.println("\n=== INSTRUÇÕES ===");
-                    System.out.println("Responda corretamente as perguntas em cada fase para avançar na história.");
+                    System.out.println("Responda corretamente às perguntas em cada fase para avançar na história.");
                     System.out.println("Se errar, o jogo termina. Boa sorte!");
                     break;
                 case "3":
-                    System.out.println("Saindo do jogo. AtÃ© a prÃ³xima!");
+                    System.out.println("Saindo do jogo. Até a próxima!");
                     input.close();
                     return;
                 default:
-                    System.out.println("Opções invalídas. Tente novamente.");
+                    System.out.println("Opção inválida. Tente novamente.");
             }
-
         }
     }
 
@@ -58,8 +66,6 @@ public class JogoNoiteEstranha {
         if (faseParedes() && perguntas2() && fasePortas() && perguntas3() && faseRelogio() && perguntas4()) {
             fimJogo();
         }
-
-	///hora corrigida
         long fim = System.nanoTime();
         long duracao = fim - inicio;
         long segundosTotais = duracao / 1_000_000_000;
@@ -115,8 +121,7 @@ public class JogoNoiteEstranha {
             'c'
         );
     }
-
-     ////perguntas2
+    ////perguntas2
     public boolean perguntas2() {
             return perguntaMultipla(
             "Qual é o tipo de dado primitivo para representar números inteiros em Java?",
@@ -159,6 +164,20 @@ public class JogoNoiteEstranha {
         );
     }
     
+    public boolean perguntas3() {
+            return perguntaMultipla(
+            "O que significa FOR em um laço de repetição?",
+            new String[]{
+               " a) Definir um tipo de variável",  
+                "b) Declarar uma classe",  
+                "c) Repetir um bloco de código várias vezes ", 
+                "d) Atribuir valores a variáveis",  
+            },
+            'c'
+        );
+    }
+    
+
     public boolean faseRelogio() {
         Scanner input = new Scanner(System.in);
         System.out.println("");
@@ -226,21 +245,6 @@ public class JogoNoiteEstranha {
                 return false;
         }
     }
-
-    
-    public boolean perguntas3() {
-            return perguntaMultipla(
-            "O que significa FOR em um laço de repetição?",
-            new String[]{
-               " a) Definir um tipo de variável",  
-                "b) Declarar uma classe",  
-                "c) Repetir um bloco de código várias vezes ", 
-                "d) Atribuir valores a variáveis",  
-            },
-            'c'
-        );
-    }
-    
 
     public void fimJogo() {
         Scanner input = new Scanner(System.in);
