@@ -58,6 +58,8 @@ public class JogoNoiteEstranha {
         if (faseParedes() && perguntas2() && fasePortas() && perguntas3() && faseRelogio() && perguntas4()) {
             fimJogo();
         }
+
+	///hora corrigida
         long fim = System.nanoTime();
         long duracao = fim - inicio;
         long segundosTotais = duracao / 1_000_000_000;
