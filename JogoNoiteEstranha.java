@@ -10,7 +10,14 @@ public class JogoNoiteEstranha {
         JogoNoiteEstranha jogo = new JogoNoiteEstranha();
 
         while (true) {
-            
+            System.out.print("""
+                                                                                                                                
+                               _____      _                     _                      _                              _         
+                              |     |   _| |___ ___ ___ ___ ___| |_ ___ ___    ___ ___| |_ ___ ___    _____ _ _ ___ _| |___ ___ 
+                              |  |  |  | . | -_|_ -| . | -_|  _|  _| .'|  _|  | -_|   |  _|  _| -_|  |     | | |   | . | . |_ -|
+                              |_____|  |___|___|___|  _|___|_| |_| |__,|_|    |___|_|_|_| |_| |___|  |_|_|_|___|_|_|___|___|___|
+                                                   |_|                                                                          
+                              """);
             System.out.println("\n=== MENU PRINCIPAL ===");
             System.out.println("1. Iniciar o jogo");
             System.out.println("2. Instruções");
