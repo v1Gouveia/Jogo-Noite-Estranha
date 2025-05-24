@@ -10,14 +10,7 @@ public class JogoNoiteEstranha {
         JogoNoiteEstranha jogo = new JogoNoiteEstranha();
 
         while (true) {
-            System.out.print("""
-                                                                                                                                
-                               _____      _                     _                      _                              _         
-                              |     |   _| |___ ___ ___ ___ ___| |_ ___ ___    ___ ___| |_ ___ ___    _____ _ _ ___ _| |___ ___ 
-                              |  |  |  | . | -_|_ -| . | -_|  _|  _| .'|  _|  | -_|   |  _|  _| -_|  |     | | |   | . | . |_ -|
-                              |_____|  |___|___|___|  _|___|_| |_| |__,|_|    |___|_|_|_| |_| |___|  |_|_|_|___|_|_|___|___|___|
-                                                   |_|                                                                          
-                              """);
+            
             System.out.println("\n=== MENU PRINCIPAL ===");
             System.out.println("1. Iniciar o jogo");
             System.out.println("2. Instruções");
@@ -26,7 +19,24 @@ public class JogoNoiteEstranha {
 
             String escolha = input.nextLine();
 
-            
+            switch (escolha) {
+                case "1":
+                    jogo.iniciarJogo();
+                    
+                    break;
+                case "2":
+                    System.out.println("\n=== INSTRUÇÕES ===");
+                    System.out.println("Responda corretamente as perguntas em cada fase para avançar na história.");
+                    System.out.println("Se errar, o jogo termina. Boa sorte!");
+                    break;
+                case "3":
+                    System.out.println("Saindo do jogo. AtÃ© a prÃ³xima!");
+                    input.close();
+                    return;
+                default:
+                    System.out.println("Opções invalídas. Tente novamente.");
+            }
+
         }
     }
 
